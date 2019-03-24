@@ -12,7 +12,8 @@ class SessionsController < ApplicationController
     end
   end
 
-  # user clicks logout link on homepage, delete user and return to homepage
+  # user clicks logout link on homepage, delete user.
+  # return to login page
   def destroy
       session.delete :name
       redirect_to '/sessions/new'
